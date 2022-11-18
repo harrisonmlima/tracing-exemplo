@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gerador-cpf
+  
+spec:
+  selector:
+    matchLabels:
+      app: gerador-cpf
+  template:
+    metadata:
+      labels:
+        app: gerador-cpf
+    spec:
+      containers:
+      - name: gerador-cpf
+        image: harrisonlima/gerador-cpf
+        ports:
+        - containerPort: 5003
+        env:
+          - name: JAEGER_HOST
+            value: "jaeger"
+          - name: JAEGER_PORT
+            value: "JAEGER_PORT"
+          - name: JAEGER_SERVICE_NAME
+            value: "gerador-cpf"   

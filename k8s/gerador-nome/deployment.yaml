@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gerador-nome
+  
+spec:
+  selector:
+    matchLabels:
+      app: gerador-nome
+  template:
+    metadata:
+      labels:
+        app: gerador-nome
+    spec:
+      containers:
+      - name: gerador-nome
+        image: harrisonlima/gerador-nome
+        ports:
+        - containerPort: 5001
+        env:
+          - name: JAEGER_HOST
+            value: "jaeger"
+          - name: JAEGER_PORT
+            value: "JAEGER_PORT"
+          - name: JAEGER_SERVICE_NAME
+            value: "gerador-nome"  

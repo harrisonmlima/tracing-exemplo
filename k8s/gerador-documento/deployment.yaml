@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gerador-documento
+  
+spec:
+  selector:
+    matchLabels:
+      app: gerador-documento
+  template:
+    metadata:
+      labels:
+        app: gerador-documento
+    spec:
+      containers:
+      - name: gerador-documento
+        image: harrisonlima/gerador-documento
+        ports:
+        - containerPort: 5002
+        env:
+          - name: URL_GERADOR_CPF
+            value: "gerador-cpf:5000"
+          - name: URL_GERADOR_RG
+            value: "gerador-rg:5000"
+          - name: JAEGER_HOST
+            value: "jaeger"
+          - name: JAEGER_PORT
+            value: "JAEGER_PORT"
+          - name: JAEGER_SERVICE_NAME
+            value: "gerador-documento" 

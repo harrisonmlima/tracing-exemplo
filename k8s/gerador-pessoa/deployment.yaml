@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gerador-pessoa
+spec:
+  selector:
+    matchLabels:
+      app: gerador-pessoa
+  template:
+    metadata:
+      labels:
+        app: gerador-pessoa
+    spec:
+      containers:
+      - name: gerador-pessoa
+        image: harrisonlima/gerador-pessoa
+        ports:
+        - containerPort: 5000
+        env:
+          - name: URL_GERADOR_NOME
+            value: "gerador-nome:5000"
+          - name: URL_GERADOR_DOCUMENTO
+            value: "gerador-documento:5000" 
+          - name: JAEGER_HOST
+            value: "jaeger"
+          - name: JAEGER_PORT
+            value: "JAEGER_PORT"
+          - name: JAEGER_SERVICE_NAME
+            value: "gerador-pessoa" 
