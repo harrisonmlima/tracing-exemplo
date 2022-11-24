@@ -16,7 +16,7 @@ spec:
       - name: gerador-nome
         image: harrisonlima/gerador-nome
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
         env:
           - name: JAEGER_HOST
             value: "jaeger-agent.jaeger.svc.cluster.local"

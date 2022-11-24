@@ -16,7 +16,7 @@ spec:
       - name: gerador-documento
         image: harrisonlima/gerador-documento
         ports:
-        - containerPort: 5002
+        - containerPort: 5000
         env:
           - name: URL_GERADOR_CPF
             value: "gerador-cpf:5000"

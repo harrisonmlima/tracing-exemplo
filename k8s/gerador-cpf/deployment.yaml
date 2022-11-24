@@ -16,7 +16,7 @@ spec:
       - name: gerador-cpf
         image: harrisonlima/gerador-cpf
         ports:
-        - containerPort: 5003
+        - containerPort: 5000
         env:
           - name: JAEGER_HOST
             value: "jaeger-agent.jaeger.svc.cluster.local"
