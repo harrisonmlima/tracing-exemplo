@@ -6,5 +6,5 @@ spec:
   selector:
     app: gerador-documento
   ports:
-  - port: 5002
+  - port: 5000
     targetPort: 5000

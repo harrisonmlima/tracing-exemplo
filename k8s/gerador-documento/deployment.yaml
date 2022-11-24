@@ -23,8 +23,8 @@ spec:
           - name: URL_GERADOR_RG
             value: "gerador-rg:5000"
           - name: JAEGER_HOST
-            value: "jaeger"
+            value: "jaeger-agent.jaeger.svc.cluster.local"
           - name: JAEGER_PORT
-            value: "JAEGER_PORT"
+            value: "6831"
           - name: JAEGER_SERVICE_NAME
             value: "gerador-documento" 

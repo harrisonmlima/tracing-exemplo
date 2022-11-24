@@ -22,7 +22,7 @@ spec:
           - name: URL_GERADOR_DOCUMENTO
             value: "gerador-documento:5000" 
           - name: JAEGER_HOST
-            value: "jaeger"
+            value: "localhost"
           - name: JAEGER_PORT
             value: "JAEGER_PORT"
           - name: JAEGER_SERVICE_NAME

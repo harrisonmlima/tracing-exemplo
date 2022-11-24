@@ -6,5 +6,5 @@ spec:
   selector:
     app: gerador-cpf
   ports:
-  - port: 5003
+  - port: 5000
     targetPort: 5000

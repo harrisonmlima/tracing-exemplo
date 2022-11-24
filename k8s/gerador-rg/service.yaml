@@ -6,5 +6,5 @@ spec:
   selector:
     app: gerador-rg
   ports:
-  - port: 5004
+  - port: 5000
     targetPort: 5000

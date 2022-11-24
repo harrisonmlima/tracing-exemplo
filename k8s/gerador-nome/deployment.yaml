@@ -19,8 +19,8 @@ spec:
         - containerPort: 5001
         env:
           - name: JAEGER_HOST
-            value: "jaeger"
+            value: "jaeger-agent.jaeger.svc.cluster.local"
           - name: JAEGER_PORT
-            value: "JAEGER_PORT"
+            value: "6831"
           - name: JAEGER_SERVICE_NAME
             value: "gerador-nome"  
